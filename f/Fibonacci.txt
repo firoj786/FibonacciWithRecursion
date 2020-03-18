@@ -1,0 +1,37 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sensennetworkcode;
+
+/**
+ *
+ * @author sensen
+ */
+public class Fabonicci {
+    public static long fabo(int n){
+        if((n==0) || (n==1))
+            return n;
+        else
+            return fabo(n-1)+fabo(n-2);
+    }
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("fabo of %d is:%d\n",i,fabo(i));
+            
+        }
+    }
+}
+/*println() prints a new blank line and then your message.
+printf() provides string formatting similar to the printf function in C.
+        printf() is primarily needed when you need to print big strings to avoid string concatenaion in println() which can be confusing at times.
+(Although both can be used in almost all cases).
+
+Eg.
+int a = 10;int b = 20;
+
+println("a: " + a + " b: " + b);      //Tedious String Concatenation
+
+printf("a: %d b: %d\n", a, b);     // Output using string formatting.
+*/
